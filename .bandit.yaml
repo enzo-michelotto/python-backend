@@ -1,0 +1,36 @@
+exclude_dirs:
+  - tests
+  - docs
+  - migrations
+  - alembic
+  - .venv
+  - venv
+  - env
+  - .git
+  - __pycache__
+
+targets:
+  - app
+  - utils
+
+skips:
+  - B101
+  - B404
+  - B603
+  - B604
+
+profiles:
+  strict:
+    include:
+      - B201
+      - B301
+      - B303
+      - B304  
+      - B305  
+      - B324  
+  fast:
+    exclude:
+      - B101
+      - B404
+      - B603
+      - B604
